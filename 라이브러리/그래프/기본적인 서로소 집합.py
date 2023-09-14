@@ -6,7 +6,7 @@ def find_parent(parent, x):
     return x
 
 
-# 두 원소가 속한 집앟ㅂ을 합치기
+# 두 원소가 속한 집합을 합치기
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
