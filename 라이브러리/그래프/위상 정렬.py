@@ -9,6 +9,7 @@ for _ in range(e):
     graph[a].append(b)
     indegree[b] += 1
 
+
 # 위상 정렬 함수
 def topology_sort():
     result = []
@@ -28,5 +29,6 @@ def topology_sort():
     # 위상 정렬을 수행한 결과 출력
     for i in result:
         print(i, end=' ')
+
 
 topology_sort()

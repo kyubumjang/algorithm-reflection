@@ -42,4 +42,5 @@ def topoloy_sort():
     for i in range(1, v + 1):
         print(result[i])
 
+
 topoloy_sort()

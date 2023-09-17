@@ -5,6 +5,7 @@ def find_parent(parent, x):
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
 
+
 # 두 원소가 속한 집합을 함치기
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
@@ -14,9 +15,10 @@ def union_parent(parent, a, b):
     else:
         parent[a] = b
 
+
 # 노드의 개수와 간선의 개수 입력받기
 v, e = map(int, input().split())
-parent = [0] * (v + 1) # 부모 테이블 초기화
+parent = [0] * (v + 1)  # 부모 테이블 초기화
 
 # 모든 간선을 담을 리스트와 최종 비용을 담을 변수
 edges = []
@@ -34,7 +36,7 @@ for _ in range(e):
 
 # 간선을 비용순으로 정렬
 edges.sort()
-last = 0 # 최소 신장 트리에 포함되는 간선 중에서 가장 비용이 큰 간선
+last = 0  # 최소 신장 트리에 포함되는 간선 중에서 가장 비용이 큰 간선
 
 # 간선을 하나씩 확인하며
 for edge in edges:
